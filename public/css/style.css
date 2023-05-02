@@ -4,7 +4,7 @@
   --dark: #2b2d42;
   --light: #adb5bd;
   --border: #dee2e6;
-  --boder-btn: #edf2f4;
+  --border-btn: #edf2f4;
 }
 
 * {
@@ -42,7 +42,7 @@ a {
 }
 
 .border-shadow {
-  border: 1px solid var(--boder-btn);
+  border: 1px solid var(--border-btn);
   box-shadow: 1px 3px 10px #e9ecef;
 }
 
@@ -112,4 +112,30 @@ table {
   color: #fff;
   background-color: var(--dark);
   border-color: #32383e;
+}
+
+@media only screen and (max-width: 600px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid var(--border);
+  }
+
+  td {
+    border: none;
+    position: relative;
+  }
 }
